@@ -28,25 +28,20 @@ build:
     - gammapy-data-select = gammapy.scripts.data_select:data_select_main
     - gammapy-data-show = gammapy.scripts.data_show:data_show_main
     - gammapy-spectrum = gammapy.scripts.spectrum:cli
-    - gammapy-spectrum-hspec = gammapy.hspec.run_fit:main
-    - gammapy-spectrum-pfsim = gammapy.scripts.spectrum_pfsim:spectrum_pfsim_main
     - gammapy-spectrum-regions = gammapy.scripts.spectrum_regions:spectrum_regions_main
+    - gammapy-spectrum-pipe = gammapy.scripts.spectrum_pipe:main
     - gammapy-image-bin = gammapy.scripts.image_bin:image_bin_main
-    - gammapy-image-coordinates = gammapy.scripts.image_coordinates:image_coordinates_main
-    - gammapy-image-cwt = gammapy.scripts.image_cwt:image_cwt_main
     - gammapy-image-lima = gammapy.scripts.image_lima:image_lima
     - gammapy-image-fit = gammapy.scripts.image_fit:image_fit_main
-    - gammapy-image-lookup = gammapy.scripts.image_lookup:image_lookup_main
     - gammapy-image-model = gammapy.scripts.image_model:image_model_main
     - gammapy-image-model-sherpa = gammapy.scripts.image_model_sherpa:image_model_sherpa_main
-    - gammapy-image-pfmap = gammapy.scripts.image_pfmap:image_pfmap_main
     - gammapy-image-ts = gammapy.scripts.image_ts:image_ts_main
+    - gammapy-image-pipe = gammapy.scripts.image_pipe:image_pipe_main
     - gammapy-cube-bin = gammapy.scripts.cube_bin:cube_bin_main
     - gammapy-detect = gammapy.scripts.detect:detect_main
     - gammapy-detect-iterative = gammapy.scripts.detect_iterative:detect_iterative_main
     - gammapy-catalog-browse = gammapy.scripts.catalog_browser:main
     - gammapy-catalog-query = gammapy.scripts.catalog_query:cli
-    - gammapy-catalog-simulate = gammapy.scripts.catalog_simulate:catalog_simulate_main
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
@@ -56,16 +51,18 @@ requirements:
   build:
     - python
     - setuptools
-    - click
     - numpy >=1.8
-    - astropy >=1.1
+    - astropy >=1.2
+    - regions
+    - click
 
   run:
     - python
     - setuptools
-    - click
     - numpy >=1.8
-    - astropy >=1.1
+    - astropy >=1.2
+    - regions
+    - click
 
 test:
   # Python imports
